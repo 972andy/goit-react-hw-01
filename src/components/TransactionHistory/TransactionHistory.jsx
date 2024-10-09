@@ -1,6 +1,6 @@
 import './TransactionHistory.modules.css'; // Імпорт стилів
 
-const TransactionHistory = ({ item }) => {
+const TransactionHistory = ({ transactions }) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -11,7 +11,7 @@ const TransactionHistory = ({ item }) => {
         </tr>
       </thead>
       <tbody>
-        {item.map(({ id, type, amount, currency }) => (
+        {transactions.map(({ id, type, amount, currency }) => (
           <tr key={id}>
             <td>{type}</td>
             <td>{amount}</td>
